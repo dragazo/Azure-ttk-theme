@@ -14,10 +14,10 @@ proc set_theme {mode} {
             -bg             "#333333"
             -disabledfg     "#ffffff"
             -disabledbg     "#737373"
-            -selectfg       "#ffffff"
-            -selectbg       "#007fff"
+            -selectfg       "#333333"
+            -selectbg       "#cccccc"
         }
-        
+
         ttk::style configure . \
             -background $colors(-bg) \
             -foreground $colors(-fg) \
@@ -44,17 +44,16 @@ proc set_theme {mode} {
 
         option add *font [ttk::style lookup . -font]
         option add *Menu.selectcolor $colors(-fg)
-    
 	} elseif {$mode == "light"} {
 		ttk::style theme use "azure-light"
 
         array set colors {
             -fg             "#000000"
-            -bg             "#ffffff"
+            -bg             "#ededed"
             -disabledfg     "#737373"
-            -disabledbg     "#ffffff"
-            -selectfg       "#ffffff"
-            -selectbg       "#007fff"
+            -disabledbg     "#ededed"
+            -selectfg       "#000000"
+            -selectbg       "#cccccc"
         }
 
 		ttk::style configure . \
